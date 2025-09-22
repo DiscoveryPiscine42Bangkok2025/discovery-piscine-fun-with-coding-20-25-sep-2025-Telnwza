@@ -2,7 +2,7 @@ let todos = []; //เก็บ list todo
 const COOKIE_NAME = "todos";
 const ONE_YEAR = 60 * 60 * 24 * 365;
 
-function saveTodosToCookie() {
+function saveTodosToCookie() { //เซฟไปcookie
   try {
     const value = encodeURIComponent(JSON.stringify(todos));
     document.cookie = `${COOKIE_NAME}=${value}; path=/; max-age=${ONE_YEAR}`;
@@ -11,7 +11,7 @@ function saveTodosToCookie() {
   }
 }
 
-function loadTodosFromCookie() {
+function loadTodosFromCookie() { //ดึงarray list มา
   const pairs = document.cookie.split(";").map(s => s.trim());
   const found = pairs.find(p => p.startsWith(COOKIE_NAME + "="));
   if (!found) return [];
@@ -33,7 +33,7 @@ function render(listEl) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {//เมื่อกดปุ่ม
   const listEl = document.getElementById("ft_list");
   const newBtn = document.getElementById("newTodo");
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   todos = loadTodosFromCookie();
   render(listEl);
 
-  newBtn.addEventListener("click", () => {
+  newBtn.addEventListener("click", () => { //ปุ่มเพิ่ม
     const input = prompt("Enter a new TODO:");
     if (input === null) return;
     const text = input.trim();
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     render(listEl);
   });
 
-  listEl.addEventListener("click", (e) => {
+  listEl.addEventListener("click", (e) => { //ลบเมื่อกดบนตัวที่อยากลบ
     const target = e.target.closest(".todo-item");
     if (!target) return;
     const idx = Array.from(listEl.children).indexOf(target);
