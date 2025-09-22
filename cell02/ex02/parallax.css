@@ -6,7 +6,7 @@ body, html {
 /* Parallax background */
 .parallax_top {
   background-image: url("img.jpg"); /* put your photo here */
-  height: 1000px;            /* adjust size */
+  height: 100vh;            /* adjust size */
   background-attachment: fixed; /* key for parallax */
   background-position: center;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@ body, html {
 }
 .parallax_buttom {
   background-image: url("images.jpg"); /* put your photo here */
-  height: 1000px;            /* adjust size */
+  height: 100vh;            /* adjust size */
   background-attachment: fixed; /* key for parallax */
   background-position: center;
   background-repeat: no-repeat;
