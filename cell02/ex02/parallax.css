@@ -1,0 +1,38 @@
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+/* Parallax background */
+.parallax_top {
+  background-image: url("img.jpg"); /* put your photo here */
+  height: 1000px;            /* adjust size */
+  background-attachment: fixed; /* key for parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax_buttom {
+  background-image: url("images.jpg"); /* put your photo here */
+  height: 1000px;            /* adjust size */
+  background-attachment: fixed; /* key for parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center-text {
+  height: 100vh;                  /* full viewport height */
+  display: flex;                  /* use flexbox */
+  justify-content: center;        /* center horizontally */
+  align-items: center;            /* center vertically */
+  color: white;                   /* text color */
+}
+
+/* Normal content */
+.content {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
