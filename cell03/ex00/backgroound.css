@@ -1,0 +1,25 @@
+/* Center the button on the page and set a neutral starting color */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Basic button styling with a subtle click animation */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.8);
+}
