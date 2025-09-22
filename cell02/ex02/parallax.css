@@ -27,6 +27,8 @@ body, html {
   justify-content: center;        /* center horizontally */
   align-items: center;            /* center vertically */
   color: white;                   /* text color */
+  font-size: 50px;
+  font-style:oblique;
 }
 
 /* Normal content */
