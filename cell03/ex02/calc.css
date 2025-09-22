@@ -1,0 +1,53 @@
+
+html, body { 
+  text-align: center;
+  height: 100%; 
+  margin: 0; 
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #fcf4e9;
+  color: black;
+}
+
+.cal {
+  width: min(640px, 92vw);
+  background: wheat;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.08);
+  color: grey;
+}
+
+#calForm {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+#left, #right, #op {
+  padding: 10px 12px;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.btn {
+  grid-column: 1 / -1;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: grey;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn:hover { 
+  filter: brightness(1.05);
+}
+.btn:active { 
+  filter: brightness(0.95); 
+}
