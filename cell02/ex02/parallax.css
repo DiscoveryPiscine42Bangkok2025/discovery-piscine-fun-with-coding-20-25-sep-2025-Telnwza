@@ -21,7 +21,7 @@ body, html {
   background-size: cover;
 }
 
-.center-text {
+.top-text {
   height: 100vh;                  /* full viewport height */
   display: flex;                  /* use flexbox */
   justify-content: center;        /* center horizontally */
@@ -37,4 +37,14 @@ body, html {
   color: white;
   text-align: center;
   padding: 50px;
+}
+
+.buttom-text {
+  height: 100vh;                  /* full viewport height */
+  display: flex;                  /* use flexbox */
+  justify-content: center;        /* center horizontally */
+  align-items: center;            /* center vertically */
+  color: white;                   /* text color */
+  font-size: 50px;
+  font-style:oblique;
 }
