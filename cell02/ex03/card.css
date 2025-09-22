@@ -1,0 +1,83 @@
+/* Center the profile card on the page */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.head {
+  text-align: center;
+  margin: 0;
+}
+
+.card {
+  width: 275px;
+  padding: 24px 24px 32px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
+}
+
+.img {
+  width: 180px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 4px 0;
+  color: #555555;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 12px auto 20px;
+}
+
+.social img {
+  width: 40px;
+  height: auto;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #303030;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+/* Darken the call-to-action as users interact */
+.button:hover {
+  background-color: #1f1f1f;
+}
+
+.button:active {
+  background-color: #0d0d0d;
+}
