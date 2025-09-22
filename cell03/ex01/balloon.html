@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="balloon.css">
+  </head>
+  <body>
+    <button id="button"> </button>
+    <script>
+      var button = document.getElementById('button');
+      var colorIndex = 0;
+      var size = 200;
+      var colors = ['red', 'green', 'blue'];
+
+      button.onclick = function () {
+        size = size >= 420 ? 200 : size + 10;
+        colorIndex = colorIndex >= 2 ? 0 : colorIndex + 1;
+        button.style.backgroundColor = colors[colorIndex];
+        button.style.width = size + 'px';
+        button.style.height = size + 'px';
+      };
+
+      button.onmouseenter = function () {
+        size = size <= 200 ? 200 : size - 5;
+        colorIndex = colorIndex <= 0 ? 2 : colorIndex - 1;
+        button.style.backgroundColor = colors[colorIndex];
+        button.style.width = size + 'px';
+        button.style.height = size + 'px';
+      };
+    </script>
+  </body>
+</html>
