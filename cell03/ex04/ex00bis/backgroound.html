@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="backgroound.css">
   </head>
   <body>
     <button id="color-button">Change color</button>
     <script>
-      var button = document.getElementById('color-button');
-
-      // Generate a random hex color like #12AB4F
-      function RandomC() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i += 1) {
-          color += letters[Math.floor(Math.random() * 16)];
+      // Switched to jQuery so the handler waits for the DOM to be ready before binding.
+      $(function () {
+        // Random color helper kept from the original version to preserve behaviour.
+        function randomHexColor() {
+          var letters = '0123456789ABCDEF';
+          var color = '#';
+          for (var i = 0; i < 6; i += 1) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
         }
-        return color;
-      }
 
-      // Update the page background each time the button is clicked
-      button.onclick = function () {
-        document.body.style.backgroundColor = RandomC();
-      };
+        // Replaced native onclick with jQuery's on() for clearer event binding in this version.
+        $('#color-button').on('click', function () {
+          // Using jQuery's css() to update the body background with the new color.
+          $('body').css('background-color', randomHexColor());
+        });
+      });
     </script>
   </body>
 </html>
