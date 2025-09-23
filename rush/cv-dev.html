@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Te — Dev Focus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+</head>
+<body class="detail-body detail-dev">
+  <nav class="detail-nav" aria-label="Section navigation">
+    <a class="detail-nav-back" href="index.html">
+      <span aria-hidden="true" class="detail-nav-back-icon">⌂</span>
+      <span>Focus Modes</span>
+    </a>
+    <div class="detail-nav-pill">
+      <a class="detail-nav-link is-active" href="#overview" aria-current="page">
+        <span class="detail-nav-icon" aria-hidden="true">📘</span>
+        <span>Overview</span>
+      </a>
+      <a class="detail-nav-link" href="#skills">
+        <span class="detail-nav-icon" aria-hidden="true">🛠</span>
+        <span>Skills</span>
+      </a>
+      <a class="detail-nav-link" href="#projects">
+        <span class="detail-nav-icon" aria-hidden="true">🚀</span>
+        <span>Projects</span>
+      </a>
+      <a class="detail-nav-link" href="#contact">
+        <span class="detail-nav-icon" aria-hidden="true">📬</span>
+        <span>Contact</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="detail-shell">
+    <section id="overview" class="detail-section detail-hero">
+      <div class="detail-card">
+        <div class="detail-hero-layout">
+          <div class="detail-avatar" aria-hidden="true">
+            <img src="assets/img/profile.jpg" alt="Te profile" loading="lazy"/>
+          </div>
+          <div class="detail-hero-content">
+            <span class="detail-kicker">Software & Embedded Builder</span>
+            <h1 class="detail-title">Te — Dev Focus Portfolio</h1>
+            <p class="detail-lead">Computer Engineering student @ KMITL ที่ชอบต่อยอดไอเดียผ่านโค้ดจริง ตั้งแต่ C/C++ ไปจนถึง web basics และ Arduino/ESP32</p>
+            <div class="detail-badge-row">
+              <span class="detail-badge">C / C++</span>
+              <span class="detail-badge">HTML / CSS / JS</span>
+              <span class="detail-badge">Embedded & IoT</span>
+            </div>
+            <div class="detail-actions">
+              <a class="detail-button primary" href="assets/Te_CV.pdf" download>Download CV</a>
+              <a class="detail-button ghost" href="#projects">Explore projects</a>
+            </div>
+          </div>
+        </div>
+        <dl class="detail-meta-grid">
+          <div class="detail-meta">
+            <dt>Current</dt>
+            <dd>Computer Engineering @ KMITL</dd>
+          </div>
+          <div class="detail-meta">
+            <dt>Strength</dt>
+            <dd>Low-level problem solving & rapid prototyping</dd>
+          </div>
+          <div class="detail-meta">
+            <dt>Looking for</dt>
+            <dd>Hands-on projects, robotics labs, junior dev roles</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="skills" class="detail-section">
+      <div class="detail-card">
+        <header class="detail-section-head">
+          <h2>Skills Snapshot</h2>
+          <p>สรุปเทคโนโลยีที่ใช้บ่อย พร้อมจุดเด่นและประสบการณ์จากโปรเจกต์จริง</p>
+        </header>
+        <div class="detail-chip-grid">
+          <span class="detail-chip">C / C++</span>
+          <span class="detail-chip">Python Basics</span>
+          <span class="detail-chip">HTML / CSS / JS</span>
+          <span class="detail-chip">jQuery</span>
+          <span class="detail-chip">Arduino / ESP32</span>
+          <span class="detail-chip">PWM & Sensors</span>
+          <span class="detail-chip">Linux Basics</span>
+          <span class="detail-chip">Version Control (Git)</span>
+        </div>
+        <ul class="detail-list">
+          <li><strong>Embedded:</strong> เขียน driver เล็กๆ, จัดการ state machine และ hardware debug</li>
+          <li><strong>Web UI:</strong> ทำ landing page เร็วด้วย HTML/CSS/JS และ utility ที่ใช้บ่อย</li>
+          <li><strong>Team habits:</strong> จัด repo, README, และ flow ให้เพื่อนเข้าใจง่าย</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="detail-section">
+      <div class="detail-card">
+        <header class="detail-section-head">
+          <h2>Selected Projects</h2>
+          <p>ชุดตัวอย่างที่โชว์วิธีคิด การออกแบบ และผลลัพธ์ที่วัดได้</p>
+        </header>
+        <div class="detail-project-grid">
+          <article class="detail-project">
+            <div class="detail-project-icon" aria-hidden="true">🤖</div>
+            <div class="detail-project-body">
+              <h3>Color Sorting Robot</h3>
+              <p>ระบบแยกวัตถุด้วย ESP32 + RGB sensor พร้อมมอเตอร์ที่ควบคุมด้วย PWM และ state machine</p>
+              <ul>
+                <li>เขียน logic ควบคุม sensor calibration แบบ on-the-fly</li>
+                <li>ออกแบบ serial dashboard สำหรับ debug พฤติกรรมของมอเตอร์</li>
+              </ul>
+              <a class="detail-link" href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+          <article class="detail-project">
+            <div class="detail-project-icon" aria-hidden="true">🧭</div>
+            <div class="detail-project-body">
+              <h3>Mini CLI Tools</h3>
+              <p>ชุด utility ขนาดเล็กบน Linux สำหรับ automate งานซ้ำ เช่น log parser และ backup script</p>
+              <ul>
+                <li>โฟกัส clean code, argument parsing และ error handling</li>
+                <li>แชร์ให้เพื่อนในทีมใช้ผ่าน Git พร้อมคู่มือสั้นๆ</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="detail-section">
+      <div class="detail-card">
+        <header class="detail-section-head">
+          <h2>Contact & Social</h2>
+          <p>พร้อมแลกเปลี่ยนไอเดียหรือร่วมโปรเจกต์ใหม่ ๆ</p>
+        </header>
+        <ul class="detail-contact-list">
+          <li><a class="detail-link" href="mailto:te@example.com">Email: te@example.com</a></li>
+          <li><a class="detail-link" href="https://github.com/te" target="_blank" rel="noreferrer">GitHub: github.com/te</a></li>
+          <li><a class="detail-link" href="https://www.linkedin.com/in/te" target="_blank" rel="noreferrer">LinkedIn: linkedin.com/in/te</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const detailLinks = Array.from(document.querySelectorAll('.detail-nav-link'));
+    const detailSections = detailLinks
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const setActiveLink = (hash) => {
+      detailLinks.forEach(link => {
+        const match = link.getAttribute('href') === hash;
+        link.classList.toggle('is-active', match);
+        link.setAttribute('aria-current', match ? 'page' : 'false');
+      });
+    };
+
+    detailLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        setActiveLink(link.getAttribute('href'));
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible[0]) {
+        setActiveLink('#' + visible[0].target.id);
+      }
+    }, { rootMargin: '-45% 0px -45%', threshold: [0.25, 0.4, 0.6] });
+
+    detailSections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
