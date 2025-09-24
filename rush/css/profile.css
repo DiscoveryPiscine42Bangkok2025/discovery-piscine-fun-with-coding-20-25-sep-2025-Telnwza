@@ -2,7 +2,7 @@
   color-scheme: light dark;
   --page-bg: #f8fafc;
   --page-text: #0f172a;
-  --hero-gradient: linear-gradient(135deg, #0f172a 0%, #1f2937 55%, #010409 100%);
+  --hero-gradient: linear-gradient(135deg, #19284c 0%, #19293f 55%, #010b1d 100%);
   --nav-bg: rgba(15, 23, 42, 0.55);
   --nav-border: rgba(255, 255, 255, 0.12);
   --nav-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
