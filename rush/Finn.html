@@ -4,113 +4,121 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio — Finn</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/profile.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <meta name="color-scheme" content="light dark">
 </head>
-<body class="font-sans bg-slate-50 text-slate-900">
-  <!-- Centered floating navbar -->
-  <nav class="fixed top-5 left-1/2 -translate-x-1/2 bg-slate-900/50 backdrop-blur-md rounded-[50px] px-2 py-1 z-50 shadow-lg ring-1 ring-white/10">
-    <ul class="flex items-center gap-1">
+<body class="profile-page">
+  <nav class="floating-nav">
+    <ul class="floating-nav__list">
       <li>
-        <a href="landing-page.html" class="flex items-center gap-2 px-4 py-2 rounded-2xl text-white/85 hover:text-white motion-safe:transition motion-safe:hover:bg-white/10 motion-safe:hover:scale-105 motion-safe:hover:shadow">
-          <span class="text-2xl">🏠</span><span class="text-sm font-medium">Home</span>
+        <a class="floating-nav__link" href="landing-page.html">
+          <span class="floating-nav__icon">🏠</span>
+          <span class="floating-nav__label">Home</span>
         </a>
       </li>
       <li>
-        <a href="#Profile" class="flex items-center gap-2 px-4 py-2 rounded-2xl bg-slate-800 text-blue-400 motion-safe:transition motion-safe:hover:scale-105 motion-safe:hover:bg-white/10 motion-safe:hover:shadow">
-          <span class="text-2xl">📘</span><span class="text-sm font-medium">Profile</span>
+        <a class="floating-nav__link is-active" href="#Profile" aria-current="page">
+          <span class="floating-nav__icon">📘</span>
+          <span class="floating-nav__label">Profile</span>
         </a>
       </li>
       <li>
-        <a href="#Skills" class="flex items-center gap-2 px-4 py-2 rounded-2xl bg-slate-800 text-blue-400 motion-safe:transition motion-safe:hover:scale-105 motion-safe:hover:bg-white/10 motion-safe:hover:shadow">
-          <span class="text-2xl">🚀</span><span class="text-sm font-medium">Skills</span>
+        <a class="floating-nav__link" href="#Skills">
+          <span class="floating-nav__icon">🚀</span>
+          <span class="floating-nav__label">Skills</span>
         </a>
       </li>
       <li>
-        <a href="#Experience" class="flex items-center gap-2 px-4 py-2 rounded-2xl bg-slate-800 text-blue-400 motion-safe:transition motion-safe:hover:scale-105 motion-safe:hover:bg-white/10 motion-safe:hover:shadow">
-          <span class="text-2xl">🎓</span><span class="text-sm font-medium">Experience</span>
+        <a class="floating-nav__link" href="#Experience">
+          <span class="floating-nav__icon">🎓</span>
+          <span class="floating-nav__label">Experience</span>
         </a>
       </li>
       <li>
-        <a href="#Contact" class="flex items-center gap-2 px-4 py-2 rounded-2xl bg-slate-800 text-blue-400 motion-safe:transition motion-safe:hover:scale-105 motion-safe:hover:bg-white/10 motion-safe:hover:shadow">
-          <span class="text-2xl">✉️</span><span class="text-sm font-medium">Contact</span>
+        <a class="floating-nav__link" href="#Contact">
+          <span class="floating-nav__icon">✉️</span>
+          <span class="floating-nav__label">Contact</span>
         </a>
       </li>
     </ul>
   </nav>
 
-  <!-- Hero / Landing -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-slate-900 via-gray-800 to-black text-white">
-    <h1 class="text-4xl sm:text-5xl font-extrabold">Finn — self-discovery</h1>
-    <p class="mt-3 text-lg sm:text-xl opacity-90">Exploring • Gaming</p>
-    <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-      <a href="#Skills" class="px-5 py-3 rounded-lg border border-white font-semibold hover:bg-indigo-800 motion-safe:transition hover:bg-white/15 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2">Skills</a>
-      <a href="#Contact" class="px-5 py-3 rounded-lg border border-white font-semibold hover:bg-indigo-800 motion-safe:transition hover:bg-white/15 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2">Contact</a>
+  <section class="hero">
+    <h1 class="hero__title">Finn — Self-Discovery</h1>
+    <p class="hero__subtitle">Exploring • Gaming</p>
+    <div class="hero__actions">
+      <a class="hero__button" href="#Skills">Skills</a>
+      <a class="hero__button" href="#Contact">Contact</a>
     </div>
   </section>
 
-  <!-- Profile / About -->
-  <section id="Profile" class="min-h-screen flex flex-col justify-center items-center bg-white text-slate-900 px-6">
-    <div class="max-w-3xl w-full text-center">
-      <img src="img/Finn.jpg" alt="Portrait of Finn" class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full shadow mb-4 object-cover">
-      <h2 class="text-3xl font-bold">About Me</h2>
-      <p class="mt-2 text-slate-600">
-        Hello, my name is Finn I am a Computer Science student.
-        I have no previous experience in coding, but I am very interested in creating games and websites.
-      </p>
-      <div class="mt-5 flex flex-wrap items-center justify-center gap-2">
-        <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-sm">Basic Java and Python</span>
-        
+  <section id="Profile" class="section section--light">
+    <div class="section__container">
+      <header class="section__header">
+        <img src="img/Finn.jpg" alt="Finn" class="avatar">
+        <h2>About Me</h2>
+        <p class="section__lead">
+          Hello, my name is Finn. I am a Computer Science student with a growing passion for creating games and websites.
+          I may be new to coding, but I love learning by building and exploring different tools.
+        </p>
+      </header>
+      <div class="chip-list">
+        <span class="chip">Java (learning)</span>
+        <span class="chip">Python (learning)</span>
+        <span class="chip">Game Design</span>
+        <span class="chip">Photography</span>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="Skills" class="py-16 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Skills</h2>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Card -->
-        <article class="border rounded-xl p-5 bg-white shadow-sm">
-          <h3 class="font-semibold mb-2">Programming</h3>
-          <ul class="list-disc pl-5 text-slate-700 text-sm space-y-1">
+  <section id="Skills" class="section section--muted">
+    <div class="section__container">
+      <header class="section__header">
+        <h2>Skills</h2>
+      </header>
+      <div class="card-grid card-grid--three">
+        <article class="info-card">
+          <h3 class="info-card__title">Programming</h3>
+          <ul class="info-list">
             <li>Learning Java and Python</li>
           </ul>
         </article>
-        <article class="border rounded-xl p-5 bg-white shadow-sm">
-          <h3 class="font-semibold mb-2">Gaming</h3>
-          <ul class="list-disc pl-5 text-slate-700 text-sm space-y-1">
+        <article class="info-card">
+          <h3 class="info-card__title">Gaming</h3>
+          <ul class="info-list">
             <li>Minecraft</li>
             <li>GeoGuessr</li>
           </ul>
         </article>
-        <article class="border rounded-xl p-5 bg-white shadow-sm">
-          <h3 class="font-semibold mb-2">Photographing</h3>
-          <ul class="list-disc pl-5 text-slate-700 text-sm space-y-1">
-            <li>not a professional but love to do</li>
-            <li>enjoy photographing cats, scenery, food</li>
+        <article class="info-card">
+          <h3 class="info-card__title">Photography</h3>
+          <ul class="info-list">
+            <li>Enthusiast — cats, scenery, food</li>
+            <li>Always learning new angles</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Experience / Education -->
-  <section id="Experience" class="py-16 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Education & Experience</h2>
-      <div class="grid gap-5 lg:grid-cols-2">
-        <article class="border rounded-xl bg-white p-5 shadow-sm">
-          <h3 class="font-semibold mb-2">Education</h3>
-          <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+  <section id="Experience" class="section section--light">
+    <div class="section__container">
+      <header class="section__header">
+        <h2>Education &amp; Activities</h2>
+      </header>
+      <div class="card-grid">
+        <article class="info-card">
+          <h3 class="info-card__title">Education</h3>
+          <ul class="info-list">
             <li>Computer Science — KMITL (Student)</li>
             <li>Relevant: Mathematics, Programming</li>
           </ul>
         </article>
-        <article class="border rounded-xl bg-white p-5 shadow-sm">
-          <h3 class="font-semibold mb-2">Activities</h3>
-          <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+        <article class="info-card">
+          <h3 class="info-card__title">Activities</h3>
+          <ul class="info-list">
             <li>Game project with Scratch</li>
           </ul>
         </article>
@@ -118,19 +126,21 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="Contact" class="py-16 px-6 bg-slate-900 text-white">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold">Contact</h2>
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-full border font-semibold hover:bg-white/10 motion-safe:transition" href="mailto:68050159@kmitl.ac.th">✉ 68050159@kmitl.ac.th</a>
-        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-full border font-semibold hover:bg-white/10 motion-safe:transition" href="https://github.com/68050159-nattanicha" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-full border font-semibold hover:bg-white/10 motion-safe:transition" href="https://www.instagram.com/forlorruk?igsh=cDFkaTR0NTR0bnV1" target="_blank" rel="noopener noreferrer">Instagram</a>
+  <section id="Contact" class="section section--dark">
+    <div class="section__container">
+      <header class="section__header">
+        <h2>Contact</h2>
+        <p class="section__lead">Reach out if you want to team up for creative projects or share learning tips.</p>
+      </header>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:68050159@kmitl.ac.th">✉ 68050159@kmitl.ac.th</a>
+        <a class="contact-link" href="https://github.com/68050159-nattanicha" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="contact-link" href="https://www.instagram.com/forlorruk?igsh=cDFkaTR0NTR0bnV1" target="_blank" rel="noopener noreferrer">Instagram</a>
       </div>
     </div>
   </section>
 
-  <footer class="py-6 text-center text-xs text-slate-500">© 2025 Finn — Portfolio</footer>
+  <footer class="site-footer">© 2025 Finn — Portfolio</footer>
   <script src="js/script.js"></script>
 </body>
 </html>
